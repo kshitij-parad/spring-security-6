@@ -27,6 +27,7 @@ public class WebSecurityConfig {
         .authorizeHttpRequests(
             request -> request
                             .requestMatchers("/register").permitAll()
+                            .requestMatchers("/login").permitAll()
                             .anyRequest().authenticated()
         )
         // .formLogin(Customizer.withDefaults())
